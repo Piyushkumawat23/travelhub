@@ -40,16 +40,16 @@
                 </li>
                 
                 <li class="custom-dropdown">
-                    <a href="#">Maharaja Tempo <i class="fa-solid fa-chevron-down fs-sm"></i></a>
+                    <a href="{{ url('/tempo-details') }}">Maharaja Tempo <i class="fa-solid fa-chevron-down fs-sm"></i></a>
                     <ul class="dropdown-menu-list">
-                        <li><a href="#">Luxury Maharaja</a></li>
+                        <li><a href="{{ url('/tempo-details') }}">Luxury Maharaja</a></li>
                     </ul>
                 </li>
                 
                 <li class="custom-dropdown">
                     <a href="{{ url('/services') }}">Cab Services <i class="fa-solid fa-chevron-down fs-sm"></i></a>
                     <ul class="dropdown-menu-list">
-                        <li><a href="#">Local City Taxi</a></li>
+                        <li><a href="{{ url('/services') }}">Local City Taxi</a></li>
                     </ul>
                 </li>
                 
