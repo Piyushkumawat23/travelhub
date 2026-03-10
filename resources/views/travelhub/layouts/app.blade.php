@@ -6,45 +6,72 @@
     <title>Ashish Travel Hub - Book Taxi Anywhere in India</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <link rel="stylesheet" href="{{ url('public/assets/css/travelhub/style.css') }}">
 </head>
 <body>
 
-    <div class="top-bar">
-        <div class="container d-flex justify-content-between align-items-center">
-            <div class="contact-info">
-                <span><i class="fa-solid fa-phone text-yellow"></i> +91 98765 43210</span>
-                <span class="ms-4"><i class="fa-solid fa-envelope text-yellow"></i> info@ashishtravelhub.com</span>
-            </div>
-            <div class="social-links">
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </div>
-    </div>
-
     <nav class="custom-navbar sticky-top">
-        <div class="container d-flex justify-content-between align-items-center">
-            <a href="/" class="navbar-brand-logo">
-                <i class="fa-solid fa-taxi text-yellow"></i> Ashish Travel Hub
+        <div class="container-fluid px-4 d-flex justify-content-between align-items-center">
+            
+            <a href="{{ url('/') }}" class="navbar-brand-logo">
+                <i class="fa-solid fa-car-side text-yellow logo-icon"></i>
+                <div class="logo-text-wrapper">
+                    <div class="logo-main-text">Ashish Travel Hub</div>
+                    <div class="logo-sub-text">Your Trusted Travel Partner</div>
+                </div>
             </a>
             
             <ul class="nav-links d-none d-lg-flex">
-            <li><a href="{{ url('/') }}" class="active">Home</a></li>
-                <li><a href="{{ url('/about') }}">About Us</a></li>
-                <li><a href="{{ url('/services') }}">Services</a></li>
+                <li><a href="{{ url('/') }}" class="active">Home</a></li>
+                
+                <li class="custom-dropdown">
+                    <a href="#">Tempo Traveller <i class="fa-solid fa-chevron-down fs-sm"></i></a>
+                    <ul class="dropdown-menu-list">
+                        <li><a href="#">9 Seater Tempo</a></li>
+                        <li><a href="#">12 Seater Tempo</a></li>
+                        <li><a href="#">16 Seater Tempo</a></li>
+                    </ul>
+                </li>
+                
+                <li class="custom-dropdown">
+                    <a href="#">Maharaja Tempo <i class="fa-solid fa-chevron-down fs-sm"></i></a>
+                    <ul class="dropdown-menu-list">
+                        <li><a href="#">Luxury Maharaja</a></li>
+                        <li><a href="#">Premium Maharaja</a></li>
+                    </ul>
+                </li>
+                
+                <li class="custom-dropdown">
+                    <a href="{{ url('/services') }}">Cab Services <i class="fa-solid fa-chevron-down fs-sm"></i></a>
+                    <ul class="dropdown-menu-list">
+                        <li><a href="#">Local City Taxi</a></li>
+                        <li><a href="#">Outstation Cabs</a></li>
+                        <li><a href="#">Airport Transfer</a></li>
+                    </ul>
+                </li>
+                
+                <li class="custom-dropdown">
+                    <a href="#">Routes <i class="fa-solid fa-chevron-down fs-sm"></i></a>
+                    <ul class="dropdown-menu-list">
+                        <li><a href="#">Jaipur to Delhi</a></li>
+                        <li><a href="#">Jaipur to Agra</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="#">Certificates</a></li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
-
             </ul>
 
-            <div class="nav-actions d-none d-md-flex align-items-center gap-3">
-                <a href="#" class="text-white text-decoration-none fw-bold">Sign In</a>
-                <a href="tel:+919876543210" class="btn-contact">Contact Us</a>
+            <div class="nav-phone d-none d-md-flex align-items-center">
+                <a href="tel:+919166333711" class="phone-link">
+                    <i class="fa-solid fa-phone"></i> +91 91663 33711
+                </a>
             </div>
+            
+            <button class="navbar-toggler d-lg-none text-white border-0 bg-transparent fs-2">
+                <i class="fa-solid fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -102,8 +129,6 @@
         </div>
     </footer>
 
-<script src="{{ url('public/assets/js/travelhub/custom.js') }}"></script>
-
-
+    <script src="{{ url('public/assets/js/travelhub/custom.js') }}"></script>
 </body>
 </html>
