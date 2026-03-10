@@ -16,9 +16,27 @@ use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Role;
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('travelhub.pages.home');
+})->name('home');
+
+Route::get('/about', function () {
+    return view('travelhub.pages.about');
+})->name('about');
+
+Route::get('/services', function () {
+    return view('travelhub.pages.services');
+})->name('services');
+
+Route::get('/contact', function () {
+    return view('travelhub.pages.contact');
+})->name('contact');
+
+
 
 Route::get('/dashboard', function () {
     return view('user.dashboard');
