@@ -6,64 +6,73 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>AdminLTE v4 | Dashboard</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css" integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css" integrity="sha256-tZHrRjVqNSRyWg2wbppGnT833E/Ys0DHWGwT04GiqQg=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/source-sans-3@5.0.12/index.css"
+        integrity="sha256-tXJfXfp6Ewt1ilPzLDtQnJV4hclT9XuaZUKyUvmyr+Q=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/overlayscrollbars@2.10.1/styles/overlayscrollbars.min.css"
+        integrity="sha256-tZHrRjVqNSRyWg2wbppGnT833E/Ys0DHWGwT04GiqQg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+        integrity="sha256-9kPW/n5nn53j4WMRYAxe9c1rCY96Oogo/MKSVdKzPmI=" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ asset('public/assets/admin/css/adminlte.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css" integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css" integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.css"
+        integrity="sha256-4MX+61mt9NVvvuPjUWdUdyfZfxSB1/Rf9WtqRHgG5S0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/css/jsvectormap.min.css"
+        integrity="sha256-+uGLJmmTKOqBr+2E6KDYs/NRsHxSkONXFHUL0fy2O/4=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
 
     <style>
         /* Flash Message Box Common Styles */
-       /* Flash Message Box Common Styles */
-.flash-message {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    z-index: 9999;
-    /* Opacity 1 rakhein taki agar animation fail ho to bhi dikhe */
-    opacity: 1; 
-    animation: slideIn 0.5s ease-out;
-}
+        /* Flash Message Box Common Styles */
+        .flash-message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            z-index: 9999;
+            /* Opacity 1 rakhein taki agar animation fail ho to bhi dikhe */
+            opacity: 1;
+            animation: slideIn 0.5s ease-out;
+        }
 
-/* Success Type */
-.flash-success {
-    background-color: #28a745; /* Green */
-    border-left: 5px solid #1e7e34;
-}
+        /* Success Type */
+        .flash-success {
+            background-color: #28a745;
+            /* Green */
+            border-left: 5px solid #1e7e34;
+        }
 
-/* Error Type */
-.flash-error {
-    background-color: #dc3545; /* Red */
-    border-left: 5px solid #bd2130;
-}
+        /* Error Type */
+        .flash-error {
+            background-color: #dc3545;
+            /* Red */
+            border-left: 5px solid #bd2130;
+        }
 
-.flash-message-content {
-    font-size: 16px;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        .flash-message-content {
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-/* Niche se upar aane wala animation */
-@keyframes slideIn {
-    from {
-        transform: translateX(100%); /* Right side se aayega */
-        opacity: 0;
-    }
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
+        /* Niche se upar aane wala animation */
+        @keyframes slideIn {
+            from {
+                transform: translateX(100%);
+                /* Right side se aayega */
+                opacity: 0;
+            }
+
+            to {
+                transform: translateX(0);
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -71,22 +80,22 @@
 
 <body class="layout-fixed sidebar-expand-lg bg-body-tertiary">
     <!--begin::App Wrapper-->
-   @if(session('success'))
-    <div class="flash-message flash-success" id="success-alert">
-        <div class="flash-message-content">
-            <i class="fas fa-check-circle"></i> 
-            {{ session('success') }}
+    @if(session('success'))
+        <div class="flash-message flash-success" id="success-alert">
+            <div class="flash-message-content">
+                <i class="fas fa-check-circle"></i>
+                {{ session('success') }}
+            </div>
         </div>
-    </div>
     @endif
 
     @if(session('error'))
-    <div class="flash-message flash-error" id="error-alert">
-        <div class="flash-message-content">
-            <i class="fas fa-exclamation-triangle"></i> 
-            {{ session('error') }}
+        <div class="flash-message flash-error" id="error-alert">
+            <div class="flash-message-content">
+                <i class="fas fa-exclamation-triangle"></i>
+                {{ session('error') }}
+            </div>
         </div>
-    </div>
     @endif
 
     <div class="app-wrapper">
@@ -123,10 +132,10 @@
 
 
                     <?php
-                    //   echo '<pre>';
-                    // print_r($globalPermissions);
-                    // echo '</pre>';
-                    //  die('safas');
+//   echo '<pre>';
+// print_r($globalPermissions);
+// echo '</pre>';
+//  die('safas');
                     ?>
 
                     <!-- @if (in_array('permissions.view', $globalPermissions))
@@ -390,356 +399,395 @@
 
                         {{-- Roles Menu Item --}}
                         @canany(['roles.view', 'roles.add'])
-                        <li class="nav-item @if(Request::routeIs('roles.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('roles.*')) active @endif">
-                                <i class="nav-icon bi bi-person-gear"></i>
-                                <p>
-                                    Roles
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @can('roles.view')
-                                <li class="nav-item">
-                                    <a href="{{ route('roles.index') }}"
-                                        class="nav-link @if(Request::routeIs('roles.index')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>View Roles</p>
-                                    </a>
-                                </li>
-                                @endcan
-                                @can('roles.add')
-                                <li class="nav-item">
-                                    <a href="{{ route('roles.create') }}"
-                                        class="nav-link @if(Request::routeIs('roles.create')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Add Role</p>
-                                    </a>
-                                </li>
-                                @endcan
-                            </ul>
-                        </li>
+                            <li class="nav-item @if(Request::routeIs('roles.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('roles.*')) active @endif">
+                                    <i class="nav-icon bi bi-person-gear"></i>
+                                    <p>
+                                        Roles
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('roles.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('roles.index') }}"
+                                                class="nav-link @if(Request::routeIs('roles.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>View Roles</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('roles.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('roles.create') }}"
+                                                class="nav-link @if(Request::routeIs('roles.create')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add Role</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
                         @endcanany
 
                         {{-- Staffs Menu Item --}}
 
                         @canany(['staffs.view', 'staffs.add'])
-                        <li class="nav-item @if(Request::routeIs('staffs.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('staffs.*')) active @endif">
-                                <i class="nav-icon bi bi-people"></i>
-                                <p>
-                                    Staffs
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @can('staffs.view')
-                                <li class="nav-item">
-                                    <a href="{{ route('staffs.index') }}"
-                                        class="nav-link @if(Request::routeIs('staffs.index')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Staffs View</p>
-                                    </a>
-                                </li>
-                                @endcan
-                                @can('staffs.add')
-                                <li class="nav-item">
-                                    <a href="{{ route('staffs.create') }}"
-                                        class="nav-link @if(Request::routeIs('staffs.create')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Add Staff</p>
-                                    </a>
-                                </li>
-                                @endcan
-                            </ul>
-                        </li>
+                            <li class="nav-item @if(Request::routeIs('staffs.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('staffs.*')) active @endif">
+                                    <i class="nav-icon bi bi-people"></i>
+                                    <p>
+                                        Staffs
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('staffs.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('staffs.index') }}"
+                                                class="nav-link @if(Request::routeIs('staffs.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Staffs View</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('staffs.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('staffs.create') }}"
+                                                class="nav-link @if(Request::routeIs('staffs.create')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add Staff</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
                         @endcanany
 
                         {{-- Permissions Menu Item --}}
                         @canany(['permissions.view', 'permissions.add'])
-                        <li class="nav-item @if(Request::routeIs('permissions.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('permissions.*')) active @endif">
-                                <i class="nav-icon bi bi-shield-lock"></i>
-                                <p>
-                                    Permissions
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @can('permissions.view')
-                                <li class="nav-item">
-                                    <a href="{{ route('permissions.index') }}"
-                                        class="nav-link @if(Request::routeIs('permissions.index')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Permissions View</p>
-                                    </a>
-                                </li>
-                                @endcan
-                                @can('permissions.add')
-                                <li class="nav-item">
-                                    <a href="{{ route('permissions.create') }}"
-                                        class="nav-link @if(Request::routeIs('permissions.create')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Add Permission</p>
-                                    </a>
-                                </li>
-                                @endcan
-                            </ul>
-                        </li>
+                            <li class="nav-item @if(Request::routeIs('permissions.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('permissions.*')) active @endif">
+                                    <i class="nav-icon bi bi-shield-lock"></i>
+                                    <p>
+                                        Permissions
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('permissions.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('permissions.index') }}"
+                                                class="nav-link @if(Request::routeIs('permissions.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Permissions View</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('permissions.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('permissions.create') }}"
+                                                class="nav-link @if(Request::routeIs('permissions.create')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add Permission</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
                         @endcanany
 
 
-                       
+
 
                         {{-- categories Menu Item --}}
 
                         @canany(['categories.view', 'categories.add'])
-                        <li class="nav-item @if(Request::routeIs('categories.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('categories.*')) active @endif">
-                                <i class="nav-icon bi bi-grid"></i>
+                            <li class="nav-item @if(Request::routeIs('categories.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('categories.*')) active @endif">
+                                    <i class="nav-icon bi bi-grid"></i>
+                                    <p>
+                                        categories
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('categories.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.categories.index') }}"
+                                                class="nav-link @if(Request::routeIs('admin.categories.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>categories View</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('categories.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.categories.create') }}"
+                                                class="nav-link @if(Request::routeIs('admin.categories.create')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add categories</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
+                        @endcanany
+
+
+                        {{-- Brands Menu Item --}}
+
+                        @canany(['brands.view', 'brands.add'])
+                        <li class="nav-item @if(Request::routeIs('brands.*')) menu-open @endif">
+                            <a href="#" class="nav-link @if(Request::routeIs('brands.*')) active @endif">
+                                <i class="nav-icon bi bi-tags"></i>
                                 <p>
-                                categories
+                                    Brands
                                     <i class="nav-arrow bi bi-chevron-right"></i>
                                 </p>
                             </a>
+
                             <ul class="nav nav-treeview">
-                                @can('categories.view')
+
+                                @can('brands.view')
                                 <li class="nav-item">
-                                    <a href="{{ route('admin.categories.index') }}"
-                                        class="nav-link @if(Request::routeIs('admin.categories.index')) active @endif">
+                                    <a href="{{ route('admin.brands.index') }}"
+                                    class="nav-link @if(Request::routeIs('admin.brands.index')) active @endif">
                                         <i class="nav-icon bi bi-circle"></i>
-                                        <p>categories View</p>
+                                        <p>Brands View</p>
                                     </a>
                                 </li>
                                 @endcan
-                                @can('categories.add')
+
+                                @can('brands.add')
                                 <li class="nav-item">
-                                    <a href="{{ route('admin.categories.create') }}"
-                                        class="nav-link @if(Request::routeIs('admin.categories.create')) active @endif">
+                                    <a href="{{ route('admin.brands.create') }}"
+                                    class="nav-link @if(Request::routeIs('admin.brands.create')) active @endif">
                                         <i class="nav-icon bi bi-circle"></i>
-                                        <p>Add categories</p>
+                                        <p>Add Brand</p>
                                     </a>
                                 </li>
                                 @endcan
+
                             </ul>
                         </li>
                         @endcanany
 
 
                         {{-- post Menu Item --}}
-                        
+
                         @canany(['posts.view', 'posts.add'])
-                        <li class="nav-item @if(Request::routeIs('posts.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('posts.*')) active @endif">
-                                <i class="nav-icon bi bi-file-earmark-text"></i>
-                                <p>
-                                    Posts
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @can('posts.view')
-                                <li class="nav-item">
-                                    <a href="{{ route('admin.posts.index') }}"
-                                        class="nav-link @if(Request::routeIs('admin.posts.index')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>post View</p>
-                                    </a>
-                                </li>
-                                @endcan
-                                @can('posts.add')
-                                <li class="nav-item">
-                                    <a href="{{ route('admin.posts.create') }}"
-                                        class="nav-link @if(Request::routeIs('admin.posts.create')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Add posts</p>
-                                    </a>
-                                </li>
-                                @endcan
-                            </ul>
-                        </li>
+                            <li class="nav-item @if(Request::routeIs('posts.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('posts.*')) active @endif">
+                                    <i class="nav-icon bi bi-file-earmark-text"></i>
+                                    <p>
+                                        Posts
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('posts.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.posts.index') }}"
+                                                class="nav-link @if(Request::routeIs('admin.posts.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>post View</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('posts.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.posts.create') }}"
+                                                class="nav-link @if(Request::routeIs('admin.posts.create')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add posts</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
                         @endcanany
 
 
                         {{-- blogs Menu Item --}}
-                        
+
                         @canany(['blogs.view', 'blogs.add'])
-                        <li class="nav-item @if(Request::routeIs('blogs.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('blogs.*')) active @endif">
-                                <i class="nav-icon bi bi-journal-text"></i>
-                                <p>
-                                blogs
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @can('blogs.view')
-                                <li class="nav-item">
-                                    <a href="{{ route('admin.blogs.index') }}"
-                                        class="nav-link @if(Request::routeIs('admin.blogs.index')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>blogs View</p>
-                                    </a>
-                                </li>
-                                @endcan
-                                @can('blogs.add')
-                                <li class="nav-item">
-                                    <a href="{{ route('admin.blogs.create') }}"
-                                        class="nav-link @if(Request::routeIs('admin.blogs.create')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Add blogs</p>
-                                    </a>
-                                </li>
-                                @endcan
-                            </ul>
-                        </li>
+                            <li class="nav-item @if(Request::routeIs('blogs.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('blogs.*')) active @endif">
+                                    <i class="nav-icon bi bi-journal-text"></i>
+                                    <p>
+                                        blogs
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('blogs.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.blogs.index') }}"
+                                                class="nav-link @if(Request::routeIs('admin.blogs.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>blogs View</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('blogs.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.blogs.create') }}"
+                                                class="nav-link @if(Request::routeIs('admin.blogs.create')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add blogs</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
                         @endcanany
 
 
                         {{-- newsletter Menu Item --}}
-                        
+
                         @canany(['newsletter.view'])
-                        <li class="nav-item @if(Request::routeIs('newsletter.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('newsletter.*')) active @endif">
-                                <i class="nav-icon bi bi-envelope-paper"></i>
-                                <p>
-                                newsletter
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @can('newsletter.view')
-                                <li class="nav-item">
-                                    <a href="{{ route('newsletter.index') }}"
-                                        class="nav-link @if(Request::routeIs('newsletter.index')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>newsletter View</p>
-                                    </a>
-                                </li>
-                                @endcan
-                            </ul>
-                        </li>
+                            <li class="nav-item @if(Request::routeIs('newsletter.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('newsletter.*')) active @endif">
+                                    <i class="nav-icon bi bi-envelope-paper"></i>
+                                    <p>
+                                        newsletter
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('newsletter.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('newsletter.index') }}"
+                                                class="nav-link @if(Request::routeIs('newsletter.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>newsletter View</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
                         @endcanany
 
                         {{-- pages Menu Item --}}
-                        
+
                         @canany(['pages.view', 'pages.add'])
-                        <li class="nav-item @if(Request::routeIs('pages.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('pages.*')) active @endif">
-                                <i class="nav-icon bi bi-file-earmark"></i>
-                                <p>
-                                pages
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @can('pages.view')
-                                <li class="nav-item">
-                                    <a href="{{ route('pages.index') }}"
-                                        class="nav-link @if(Request::routeIs('pages.index')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>pages View</p>
-                                    </a>
-                                </li>
-                                @endcan
-                                @can('pages.add')
-                                <li class="nav-item">
-                                    <a href="{{ route('pages.create') }}"
-                                        class="nav-link @if(Request::routeIs('pages.create')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Add pages</p>
-                                    </a>
-                                </li>
-                                @endcan
-                            </ul>
-                        </li>
+                            <li class="nav-item @if(Request::routeIs('pages.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('pages.*')) active @endif">
+                                    <i class="nav-icon bi bi-file-earmark"></i>
+                                    <p>
+                                        pages
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('pages.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('pages.index') }}"
+                                                class="nav-link @if(Request::routeIs('pages.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>pages View</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('pages.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('pages.create') }}"
+                                                class="nav-link @if(Request::routeIs('pages.create')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add pages</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
                         @endcanany
 
 
 
                         {{-- Menus Item --}}
-                        
+
                         @canany(['menus.view', 'menus.add'])
-                        <li class="nav-item @if(Request::routeIs('menus.*')) menu-open @endif">
-                            <a href="#" class="nav-link @if(Request::routeIs('menus.*')) active @endif">
-                                <i class="nav-icon bi bi-list-ul"></i>
-                                <p>
-                                menus
-                                    <i class="nav-arrow bi bi-chevron-right"></i>
-                                </p>
-                            </a>
-                            <ul class="nav nav-treeview">
-                                @can('menus.view')
-                                <li class="nav-item">
-                                    <a href="{{ route('admin.menus.index') }}"
-                                        class="nav-link @if(Request::routeIs('admin.menus.index')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>menus View</p>
-                                    </a>
-                                </li>
-                                @endcan
-                                @can('menus.add')
-                                <li class="nav-item">
-                                    <a href="{{ route('admin.menus.createMenu') }}"
-                                        class="nav-link @if(Request::routeIs('admin.menus.createMenu')) active @endif">
-                                        <i class="nav-icon bi bi-circle"></i>
-                                        <p>Add menus</p>
-                                    </a>
-                                </li>
-                                @endcan
-                            </ul>
-                        </li>
+                            <li class="nav-item @if(Request::routeIs('menus.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('menus.*')) active @endif">
+                                    <i class="nav-icon bi bi-list-ul"></i>
+                                    <p>
+                                        menus
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
+                                </a>
+                                <ul class="nav nav-treeview">
+                                    @can('menus.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.menus.index') }}"
+                                                class="nav-link @if(Request::routeIs('admin.menus.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>menus View</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('menus.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.menus.createMenu') }}"
+                                                class="nav-link @if(Request::routeIs('admin.menus.createMenu')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add menus</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
+                            </li>
                         @endcanany
 
                         <!-- smtp -->
                         @can('email.view')
-                        <li class="nav-item">
-                            <a href="{{ route('admin.smtp') }}"
-                                class="nav-link @if(Request::routeIs('admin.smtp')) active @endif">
-                                <i class="nav-icon bi bi-envelope-check"></i>
-                                <p>
-                                    Email Settings (SMTP)
-                                </p>
-                            </a>
-                        </li>
+                            <li class="nav-item">
+                                <a href="{{ route('admin.smtp') }}"
+                                    class="nav-link @if(Request::routeIs('admin.smtp')) active @endif">
+                                    <i class="nav-icon bi bi-envelope-check"></i>
+                                    <p>
+                                        Email Settings (SMTP)
+                                    </p>
+                                </a>
+                            </li>
                         @endcan
 
 
 
-                         <!-- Products Menu Item  -->
-                    @canany(['products.view', 'products.add'])
-                    <li class="nav-item @if(Request::routeIs('admin.products.*')) menu-open @endif">
-                        <a href="#" class="nav-link @if(Request::routeIs('admin.products.*')) active @endif">
-                            <i class="nav-icon bi bi-box-seam"></i> {{-- Bootstrap Icon for Product --}}
-                            <p>
-                                Products
-                                <i class="nav-arrow bi bi-chevron-right"></i>
-                            </p>
-                        </a>
-                        <ul class="nav nav-treeview">
-                            @can('products.view')
-                            <li class="nav-item">
-                                <a href="{{ route('admin.products.index') }}"
-                                    class="nav-link @if(Request::routeIs('admin.products.index')) active @endif">
-                                    <i class="nav-icon bi bi-circle"></i>
-                                    <p>View Products</p>
+                        <!-- Products Menu Item  -->
+                        @canany(['products.view', 'products.add'])
+                            <li class="nav-item @if(Request::routeIs('admin.products.*')) menu-open @endif">
+                                <a href="#" class="nav-link @if(Request::routeIs('admin.products.*')) active @endif">
+                                    <i class="nav-icon bi bi-box-seam"></i> {{-- Bootstrap Icon for Product --}}
+                                    <p>
+                                        Products
+                                        <i class="nav-arrow bi bi-chevron-right"></i>
+                                    </p>
                                 </a>
+                                <ul class="nav nav-treeview">
+                                    @can('products.view')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.products.index') }}"
+                                                class="nav-link @if(Request::routeIs('admin.products.index')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>View Products</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                    @can('products.add')
+                                        <li class="nav-item">
+                                            <a href="{{ route('admin.products.create') }}"
+                                                class="nav-link @if(Request::routeIs('admin.products.create')) active @endif">
+                                                <i class="nav-icon bi bi-circle"></i>
+                                                <p>Add Product</p>
+                                            </a>
+                                        </li>
+                                    @endcan
+                                </ul>
                             </li>
-                            @endcan
-                            @can('products.add')
-                            <li class="nav-item">
-                                <a href="{{ route('admin.products.create') }}"
-                                    class="nav-link @if(Request::routeIs('admin.products.create')) active @endif">
-                                    <i class="nav-icon bi bi-circle"></i>
-                                    <p>Add Product</p>
-                                </a>
-                            </li>
-                            @endcan
-                        </ul>
-                    </li>
-                    @endcanany
+                        @endcanany
 
-<!-- menu options -->
+                        <!-- menu options -->
 
                         <li class="nav-item">
                             <a href="#" class="nav-link">
@@ -1172,7 +1220,7 @@
             <!--end::To the end-->
             <!--begin::Copyright-->
             <strong>
-                Copyright &copy; 2014-2024&nbsp;
+                Copyright &copy; 2026 &nbsp;
                 <a href="https://piyushkumawat.in" class="text-decoration-none">Piyush Kumawat </a>.
             </strong>
             All rights reserved.
@@ -1189,38 +1237,39 @@
     <!--begin::Required Plugin(popperjs for Bootstrap 5)-->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
-    </script>
+        </script>
     <!--end::Required Plugin(popperjs for Bootstrap 5)-->
     <!--begin::Required Plugin(Bootstrap 5)-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
         integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
-    </script>
+        </script>
     <!--end::Required Plugin(Bootstrap 5)-->
     <!--begin::Required Plugin(AdminLTE)-->
-    {{-- <script src="../../dist/js/adminlte.js"></script> --}}
+    {{--
+    <script src="../../dist/js/adminlte.js"></script> --}}
     <script src="{{ asset('public/assets/admin/js/adminlte.js') }}"></script>
 
     <!--end::Required Plugin(AdminLTE)-->
     <!--begin::OverlayScrollbars Configure-->
     <script>
-    const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
-    const Default = {
-        scrollbarTheme: 'os-theme-light',
-        scrollbarAutoHide: 'leave',
-        scrollbarClickScroll: true,
-    };
-    document.addEventListener('DOMContentLoaded', function() {
-        const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
-        if (sidebarWrapper && typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== 'undefined') {
-            OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
-                scrollbars: {
-                    theme: Default.scrollbarTheme,
-                    autoHide: Default.scrollbarAutoHide,
-                    clickScroll: Default.scrollbarClickScroll,
-                },
-            });
-        }
-    });
+        const SELECTOR_SIDEBAR_WRAPPER = '.sidebar-wrapper';
+        const Default = {
+            scrollbarTheme: 'os-theme-light',
+            scrollbarAutoHide: 'leave',
+            scrollbarClickScroll: true,
+        };
+        document.addEventListener('DOMContentLoaded', function () {
+            const sidebarWrapper = document.querySelector(SELECTOR_SIDEBAR_WRAPPER);
+            if (sidebarWrapper && typeof OverlayScrollbarsGlobal?.OverlayScrollbars !== 'undefined') {
+                OverlayScrollbarsGlobal.OverlayScrollbars(sidebarWrapper, {
+                    scrollbars: {
+                        theme: Default.scrollbarTheme,
+                        autoHide: Default.scrollbarAutoHide,
+                        clickScroll: Default.scrollbarClickScroll,
+                    },
+                });
+            }
+        });
     </script>
     <!--end::OverlayScrollbars Configure-->
     <!-- OPTIONAL SCRIPTS -->
@@ -1229,30 +1278,30 @@
         integrity="sha256-ipiJrswvAR4VAx/th+6zWsdeYmVae0iJuiR+6OqHJHQ=" crossorigin="anonymous"></script>
     <!-- sortablejs -->
     <script>
-    const connectedSortables = document.querySelectorAll('.connectedSortable');
-    connectedSortables.forEach((connectedSortable) => {
-        let sortable = new Sortable(connectedSortable, {
-            group: 'shared',
-            handle: '.card-header',
+        const connectedSortables = document.querySelectorAll('.connectedSortable');
+        connectedSortables.forEach((connectedSortable) => {
+            let sortable = new Sortable(connectedSortable, {
+                group: 'shared',
+                handle: '.card-header',
+            });
         });
-    });
 
-    const cardHeaders = document.querySelectorAll('.connectedSortable .card-header');
-    cardHeaders.forEach((cardHeader) => {
-        cardHeader.style.cursor = 'move';
-    });
+        const cardHeaders = document.querySelectorAll('.connectedSortable .card-header');
+        cardHeaders.forEach((cardHeader) => {
+            cardHeader.style.cursor = 'move';
+        });
     </script>
     <!-- apexcharts -->
     <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.37.1/dist/apexcharts.min.js"
         integrity="sha256-+vh8GkaU7C9/wbSLIcwq82tQ2wTf44aOHA8HlBMwRI8=" crossorigin="anonymous"></script>
     <!-- ChartJS -->
     <script>
-    // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
-    // IT'S ALL JUST JUNK FOR DEMO
-    // ++++++++++++++++++++++++++++++++++++++++++
+        // NOTICE!! DO NOT USE ANY OF THIS JAVASCRIPT
+        // IT'S ALL JUST JUNK FOR DEMO
+        // ++++++++++++++++++++++++++++++++++++++++++
 
-    const sales_chart_options = {
-        series: [{
+        const sales_chart_options = {
+            series: [{
                 name: 'Digital Goods',
                 data: [28, 48, 40, 19, 86, 27, 90],
             },
@@ -1260,48 +1309,48 @@
                 name: 'Electronics',
                 data: [65, 59, 80, 81, 56, 55, 40],
             },
-        ],
-        chart: {
-            height: 300,
-            type: 'area',
-            toolbar: {
+            ],
+            chart: {
+                height: 300,
+                type: 'area',
+                toolbar: {
+                    show: false,
+                },
+            },
+            legend: {
                 show: false,
             },
-        },
-        legend: {
-            show: false,
-        },
-        colors: ['#0d6efd', '#20c997'],
-        dataLabels: {
-            enabled: false,
-        },
-        stroke: {
-            curve: 'smooth',
-        },
-        xaxis: {
-            type: 'datetime',
-            categories: [
-                '2023-01-01',
-                '2023-02-01',
-                '2023-03-01',
-                '2023-04-01',
-                '2023-05-01',
-                '2023-06-01',
-                '2023-07-01',
-            ],
-        },
-        tooltip: {
-            x: {
-                format: 'MMMM yyyy',
+            colors: ['#0d6efd', '#20c997'],
+            dataLabels: {
+                enabled: false,
             },
-        },
-    };
+            stroke: {
+                curve: 'smooth',
+            },
+            xaxis: {
+                type: 'datetime',
+                categories: [
+                    '2023-01-01',
+                    '2023-02-01',
+                    '2023-03-01',
+                    '2023-04-01',
+                    '2023-05-01',
+                    '2023-06-01',
+                    '2023-07-01',
+                ],
+            },
+            tooltip: {
+                x: {
+                    format: 'MMMM yyyy',
+                },
+            },
+        };
 
-    const sales_chart = new ApexCharts(
-        document.querySelector('#revenue-chart'),
-        sales_chart_options,
-    );
-    sales_chart.render();
+        const sales_chart = new ApexCharts(
+            document.querySelector('#revenue-chart'),
+            sales_chart_options,
+        );
+        sales_chart.render();
     </script>
     <!-- jsvectormap -->
     <script src="https://cdn.jsdelivr.net/npm/jsvectormap@1.5.3/dist/js/jsvectormap.min.js"
@@ -1310,145 +1359,145 @@
         integrity="sha256-XPpPaZlU8S/HWf7FZLAncLg2SAkP8ScUTII89x9D3lY=" crossorigin="anonymous"></script>
     <!-- jsvectormap -->
     <script>
-    const visitorsData = {
-        US: 398, // USA
-        SA: 400, // Saudi Arabia
-        CA: 1000, // Canada
-        DE: 500, // Germany
-        FR: 760, // France
-        CN: 300, // China
-        AU: 700, // Australia
-        BR: 600, // Brazil
-        IN: 800, // India
-        GB: 320, // Great Britain
-        RU: 3000, // Russia
-    };
+        const visitorsData = {
+            US: 398, // USA
+            SA: 400, // Saudi Arabia
+            CA: 1000, // Canada
+            DE: 500, // Germany
+            FR: 760, // France
+            CN: 300, // China
+            AU: 700, // Australia
+            BR: 600, // Brazil
+            IN: 800, // India
+            GB: 320, // Great Britain
+            RU: 3000, // Russia
+        };
 
-    // World map by jsVectorMap
-    const map = new jsVectorMap({
-        selector: '#world-map',
-        map: 'world',
-    });
+        // World map by jsVectorMap
+        const map = new jsVectorMap({
+            selector: '#world-map',
+            map: 'world',
+        });
 
-    // Sparkline charts
-    const option_sparkline1 = {
-        series: [{
-            data: [1000, 1200, 920, 927, 931, 1027, 819, 930, 1021],
-        }, ],
-        chart: {
-            type: 'area',
-            height: 50,
-            sparkline: {
-                enabled: true,
+        // Sparkline charts
+        const option_sparkline1 = {
+            series: [{
+                data: [1000, 1200, 920, 927, 931, 1027, 819, 930, 1021],
+            },],
+            chart: {
+                type: 'area',
+                height: 50,
+                sparkline: {
+                    enabled: true,
+                },
             },
-        },
-        stroke: {
-            curve: 'straight',
-        },
-        fill: {
-            opacity: 0.3,
-        },
-        yaxis: {
-            min: 0,
-        },
-        colors: ['#DCE6EC'],
-    };
-
-    const sparkline1 = new ApexCharts(document.querySelector('#sparkline-1'), option_sparkline1);
-    sparkline1.render();
-
-    const option_sparkline2 = {
-        series: [{
-            data: [515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921],
-        }, ],
-        chart: {
-            type: 'area',
-            height: 50,
-            sparkline: {
-                enabled: true,
+            stroke: {
+                curve: 'straight',
             },
-        },
-        stroke: {
-            curve: 'straight',
-        },
-        fill: {
-            opacity: 0.3,
-        },
-        yaxis: {
-            min: 0,
-        },
-        colors: ['#DCE6EC'],
-    };
-
-    const sparkline2 = new ApexCharts(document.querySelector('#sparkline-2'), option_sparkline2);
-    sparkline2.render();
-
-    const option_sparkline3 = {
-        series: [{
-            data: [15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21],
-        }, ],
-        chart: {
-            type: 'area',
-            height: 50,
-            sparkline: {
-                enabled: true,
+            fill: {
+                opacity: 0.3,
             },
-        },
-        stroke: {
-            curve: 'straight',
-        },
-        fill: {
-            opacity: 0.3,
-        },
-        yaxis: {
-            min: 0,
-        },
-        colors: ['#DCE6EC'],
-    };
+            yaxis: {
+                min: 0,
+            },
+            colors: ['#DCE6EC'],
+        };
 
-    const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
-    sparkline3.render();
+        const sparkline1 = new ApexCharts(document.querySelector('#sparkline-1'), option_sparkline1);
+        sparkline1.render();
+
+        const option_sparkline2 = {
+            series: [{
+                data: [515, 519, 520, 522, 652, 810, 370, 627, 319, 630, 921],
+            },],
+            chart: {
+                type: 'area',
+                height: 50,
+                sparkline: {
+                    enabled: true,
+                },
+            },
+            stroke: {
+                curve: 'straight',
+            },
+            fill: {
+                opacity: 0.3,
+            },
+            yaxis: {
+                min: 0,
+            },
+            colors: ['#DCE6EC'],
+        };
+
+        const sparkline2 = new ApexCharts(document.querySelector('#sparkline-2'), option_sparkline2);
+        sparkline2.render();
+
+        const option_sparkline3 = {
+            series: [{
+                data: [15, 19, 20, 22, 33, 27, 31, 27, 19, 30, 21],
+            },],
+            chart: {
+                type: 'area',
+                height: 50,
+                sparkline: {
+                    enabled: true,
+                },
+            },
+            stroke: {
+                curve: 'straight',
+            },
+            fill: {
+                opacity: 0.3,
+            },
+            yaxis: {
+                min: 0,
+            },
+            colors: ['#DCE6EC'],
+        };
+
+        const sparkline3 = new ApexCharts(document.querySelector('#sparkline-3'), option_sparkline3);
+        sparkline3.render();
     </script>
 
 
-<script>
-    // 4 Second baad message gayab karne ke liye
-    setTimeout(function() {
-        let alert = document.getElementById('success-alert');
-        if(alert) {
-            alert.style.transition = "opacity 1s ease-out";
-            alert.style.opacity = "0";
-            setTimeout(() => alert.remove(), 1000); // Remove from DOM
-        }
-    }, 4000);
+    <script>
+        // 4 Second baad message gayab karne ke liye
+        setTimeout(function () {
+            let alert = document.getElementById('success-alert');
+            if (alert) {
+                alert.style.transition = "opacity 1s ease-out";
+                alert.style.opacity = "0";
+                setTimeout(() => alert.remove(), 1000); // Remove from DOM
+            }
+        }, 4000);
 
 
-</script>
- 
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        // Success Alert
-        let successAlert = document.getElementById('success-alert');
-        if (successAlert) {
-            setTimeout(function() {
-                successAlert.style.transition = "opacity 0.5s ease";
-                successAlert.style.opacity = "0";
-                setTimeout(() => successAlert.remove(), 500);
-            }, 4000);
-        }
+    </script>
 
-        // Error Alert
-        let errorAlert = document.getElementById('error-alert');
-        if (errorAlert) {
-            setTimeout(function() {
-                errorAlert.style.transition = "opacity 0.5s ease";
-                errorAlert.style.opacity = "0";
-                setTimeout(() => errorAlert.remove(), 500);
-            }, 4000);
-        }
-    });
-</script>
-<!--end::Script-->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Success Alert
+            let successAlert = document.getElementById('success-alert');
+            if (successAlert) {
+                setTimeout(function () {
+                    successAlert.style.transition = "opacity 0.5s ease";
+                    successAlert.style.opacity = "0";
+                    setTimeout(() => successAlert.remove(), 500);
+                }, 4000);
+            }
+
+            // Error Alert
+            let errorAlert = document.getElementById('error-alert');
+            if (errorAlert) {
+                setTimeout(function () {
+                    errorAlert.style.transition = "opacity 0.5s ease";
+                    errorAlert.style.opacity = "0";
+                    setTimeout(() => errorAlert.remove(), 500);
+                }, 4000);
+            }
+        });
+    </script>
+    <!--end::Script-->
 </body>
 <!--end::Body-->
 

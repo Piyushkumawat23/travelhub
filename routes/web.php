@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\BlogsController;
 use App\Http\Controllers\RoleController;
@@ -240,7 +241,15 @@ Route::prefix('admin')->group(function () {
         Route::delete('/categories/{id}', [CategoryController::class, 'destroy'])->middleware('can:categories.delete')->name('admin.categories.destroy');
 
 
-       
+
+        // Brands
+        Route::get('/brands', [BrandController::class, 'index'])->middleware('can:brands.view')->name('admin.brands.index');
+        Route::get('/brands/create', [BrandController::class, 'create'])->middleware('can:brands.add')->name('admin.brands.create');
+        Route::post('/brands/store', [BrandController::class, 'store'])->middleware('can:brands.add')->name('admin.brands.store');
+        Route::get('/brands/{id}/edit', [BrandController::class, 'edit'])->middleware('can:brands.edit')->name('admin.brands.edit');
+        Route::put('/brands/{id}', [BrandController::class, 'update'])->middleware('can:brands.edit')->name('admin.brands.update');
+        Route::delete('/brands/{id}', [BrandController::class, 'destroy'])->middleware('can:brands.delete')->name('admin.brands.destroy');
+            
         // Post routes
         Route::get('posts', [PostController::class, 'index'])->middleware('can:posts.view')->name('admin.posts.index');
         Route::get('posts/create', [PostController::class, 'create'])->middleware('can:posts.add')->name('admin.posts.create');
