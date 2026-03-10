@@ -60,7 +60,7 @@
                     </ul>
                 </li>
                 
-                <li><a href="#">Certificates</a></li>
+                <li><a href="{{ url('/about') }}">about</a></li>
                 <li><a href="{{ url('/contact') }}">Contact</a></li>
             </ul>
 
