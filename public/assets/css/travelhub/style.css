@@ -57,7 +57,7 @@ body {
 
 .logo-main-text {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 22px;
+    font-size: 17px;
     /* Adjusted size */
     font-weight: 700;
     letter-spacing: 0.5px;
@@ -212,7 +212,7 @@ body {
    ========================================= */
 .hero-section {
     background: linear-gradient(rgba(30, 43, 69, 0.7), rgba(30, 43, 69, 0.9)), url('https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?q=80&w=2070&auto=format&fit=crop') center/cover;
-    padding: 100px 0 160px;
+    padding: 30px 0 160px;
     color: white;
     text-align: center;
 }
@@ -536,7 +536,7 @@ body {
 }
 
 /* =========================================
-   Footer (Updated matching Screenshot)
+   Footer (UPDATED)
    ========================================= */
 .footer-section {
     background-color: var(--theme-dark);

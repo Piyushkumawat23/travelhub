@@ -90,18 +90,18 @@
             
             <div class="sidebar-box">
                 <h3 class="sidebar-title">Quick Enquiry</h3>
-                <form action="#" method="POST">
-                    @csrf
-                    <input type="text" class="form-input-light" placeholder="Your Name *">
-                    <input type="text" class="form-input-light" placeholder="Phone Number *">
-                    <input type="text" class="form-input-light" placeholder="Pickup Location *">
-                    <input type="text" class="form-input-light" placeholder="Drop Location">
-                    <input type="date" class="form-input-light">
-                    <textarea class="form-input-light" rows="3" placeholder="Any special requirements..."></textarea>
-                    
+                <form id="whatsappForm">
+
+                    <input type="text" name="name" id="name" class="form-input-light" placeholder="Your Name *">
+                    <input type="text" name="phone" id="phone" class="form-input-light" placeholder="Phone Number *">
+                    <input type="text" name="pickup" id="pickup" class="form-input-light" placeholder="Pickup Location *">
+                    <input type="text" name="drop" id="drop" class="form-input-light" placeholder="Drop Location">
+                    <input type="date" name="date" id="date" class="form-input-light">
+                    <textarea name="message" id="message" class="form-input-light" rows="3" placeholder="Any special requirements..."></textarea>
                     <button type="submit" class="btn-whatsapp-submit">
                         <i class="fa-regular fa-paper-plane"></i> Send Enquiry via WhatsApp
                     </button>
+
                 </form>
             </div>
 
