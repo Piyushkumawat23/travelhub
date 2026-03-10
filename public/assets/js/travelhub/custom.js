@@ -29,7 +29,7 @@ document.getElementById("whatsappForm").addEventListener("submit", function(e){
     var date = document.getElementById("date").value;
     var message = document.getElementById("message").value;
 
-    var whatsappNumber = "919782870390"; // apna whatsapp number
+    var whatsappNumber = "919782870390"; 
 
     var text = "New Tempo Traveller Enquiry:%0A%0A"
         + "Name: " + name + "%0A"
