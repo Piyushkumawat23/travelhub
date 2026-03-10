@@ -36,7 +36,9 @@ Route::get('/contact', function () {
     return view('travelhub.pages.contact');
 })->name('contact');
 
-
+Route::get('/tempo-details', function () {
+    return view('travelhub.pages.tempo-details');
+})->name('tempo-details');
 
 Route::get('/dashboard', function () {
     return view('user.dashboard');

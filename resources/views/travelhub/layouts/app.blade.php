@@ -28,9 +28,14 @@
                 <li class="custom-dropdown">
                     <a href="#">Tempo Traveller <i class="fa-solid fa-chevron-down fs-sm"></i></a>
                     <ul class="dropdown-menu-list">
-                        <li><a href="#">9 Seater Tempo</a></li>
-                        <li><a href="#">12 Seater Tempo</a></li>
-                        <li><a href="#">16 Seater Tempo</a></li>
+                        <div class="dropdown-header-custom">All Tempo Traveller</div>
+                        <li><a href="{{ url('/tempo-details') }}">9 Seater Tempo Traveller</a></li>
+                        <li><a href="{{ url('/tempo-details') }}">12 Seater Tempo Traveller</a></li>
+                        <li><a href="{{ url('/tempo-details') }}">15 Seater Tempo Traveller</a></li>
+                        <li><a href="{{ url('/tempo-details') }}">16 Seater Tempo Traveller</a></li>
+                        <li><a href="{{ url('/tempo-details') }}">18 Seater Tempo Traveller</a></li>
+                        <li><a href="{{ url('/tempo-details') }}">20 Seater Tempo Traveller</a></li>
+                        <li><a href="{{ url('/tempo-details') }}">25 Seater Tempo Traveller</a></li>
                     </ul>
                 </li>
                 
@@ -38,7 +43,6 @@
                     <a href="#">Maharaja Tempo <i class="fa-solid fa-chevron-down fs-sm"></i></a>
                     <ul class="dropdown-menu-list">
                         <li><a href="#">Luxury Maharaja</a></li>
-                        <li><a href="#">Premium Maharaja</a></li>
                     </ul>
                 </li>
                 
@@ -46,8 +50,6 @@
                     <a href="{{ url('/services') }}">Cab Services <i class="fa-solid fa-chevron-down fs-sm"></i></a>
                     <ul class="dropdown-menu-list">
                         <li><a href="#">Local City Taxi</a></li>
-                        <li><a href="#">Outstation Cabs</a></li>
-                        <li><a href="#">Airport Transfer</a></li>
                     </ul>
                 </li>
                 
@@ -55,7 +57,6 @@
                     <a href="#">Routes <i class="fa-solid fa-chevron-down fs-sm"></i></a>
                     <ul class="dropdown-menu-list">
                         <li><a href="#">Jaipur to Delhi</a></li>
-                        <li><a href="#">Jaipur to Agra</a></li>
                     </ul>
                 </li>
                 
@@ -68,10 +69,6 @@
                     <i class="fa-solid fa-phone"></i> +91 91663 33711
                 </a>
             </div>
-            
-            <button class="navbar-toggler d-lg-none text-white border-0 bg-transparent fs-2">
-                <i class="fa-solid fa-bars"></i>
-            </button>
         </div>
     </nav>
 
@@ -79,52 +76,54 @@
         @yield('content')
     </main>
 
-    <footer class="footer-section">
-        <div class="container">
+    <footer class="footer-section" style="background-color: #1e2b45;">
+        <div class="container pt-5 pb-4">
             <div class="row">
-                <div class="col-lg-4 col-md-6 mb-4">
-                    <a href="/" class="footer-logo">
-                        <i class="fa-solid fa-taxi text-yellow"></i> Ashish Travel Hub
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <a href="/" class="footer-logo mb-3">
+                        <i class="fa-solid fa-car-side text-yellow"></i> Ashish Travel Hub
                     </a>
-                    <p class="footer-desc">Your trusted partner for safe, reliable, and comfortable taxi services across India. We provide top-notch service with experienced drivers.</p>
+                    <p class="footer-desc" style="font-size: 13px;">Your trusted travel partner for safe, reliable, and comfortable journeys across 3000+ cities in India. All India Taxi Booking Service.</p>
                 </div>
                 
-                <div class="col-lg-2 col-md-6 mb-4 footer-col">
-                    <h4>Quick Links</h4>
+                <div class="col-lg-3 col-md-6 mb-4 footer-col">
+                    <h4 style="font-size: 16px;">Taxi Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Sedan Taxi</a></li>
+                        <li><a href="#">Ertiga Cab</a></li>
+                        <li><a href="#">Innova Taxi</a></li>
+                        <li><a href="#">Innova Crysta</a></li>
+                        <li><a href="#">Tempo Traveller</a></li>
+                        <li><a href="#">Urbania on Rent</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-lg-3 col-md-6 mb-4 footer-col">
+                    <h4 style="font-size: 16px;">Quick Links</h4>
                     <ul class="footer-links">
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
                         <li><a href="#">Our Fleet</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Destinations</a></li>
+                        <li><a href="#">Book Taxi</a></li>
+                        <li><a href="#">Outstation Taxi</a></li>
+                        <li><a href="#">About Us</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-6 mb-4 footer-col">
-                    <h4>Services</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">Local City Taxi</a></li>
-                        <li><a href="#">Outstation Cabs</a></li>
-                        <li><a href="#">Airport Transfers</a></li>
-                        <li><a href="#">Corporate Travels</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 mb-4 footer-col">
-                    <h4>Contact Info</h4>
+                    <h4 style="font-size: 16px;">Contact Us</h4>
                     <ul class="footer-links footer-contact">
-                        <li><i class="fa-solid fa-location-dot text-yellow"></i> Jaipur, Rajasthan, India</li>
-                        <li><i class="fa-solid fa-phone text-yellow"></i> +91 98765 43210</li>
+                        <li><i class="fa-solid fa-phone text-yellow"></i> +91 91663 33711</li>
+                        <li><i class="fa-solid fa-phone text-yellow"></i> +91 96723 14845</li>
                         <li><i class="fa-solid fa-envelope text-yellow"></i> info@ashishtravelhub.com</li>
+                        <li><i class="fa-solid fa-location-dot text-yellow"></i> India</li>
                     </ul>
                 </div>
             </div>
             
-            <div class="footer-bottom">
-                <p class="mb-0">&copy; {{ date('Y') }} Ashish Travel Hub. All rights reserved.</p>
-                <div class="footer-policy">
-                    <a href="#" class="me-3 text-secondary text-decoration-none">Privacy Policy</a>
-                    <a href="#" class="text-secondary text-decoration-none">Terms & Conditions</a>
-                </div>
+            <div class="text-center mt-4 pt-4" style="border-top: 1px solid rgba(255,255,255,0.1); font-size: 12px; color: #94a3b8;">
+                <p class="mb-1">&copy; 2026 Ashish Travel Hub. All rights reserved.</p>
+                <p>All India Taxi Booking Service</p>
             </div>
         </div>
     </footer>
